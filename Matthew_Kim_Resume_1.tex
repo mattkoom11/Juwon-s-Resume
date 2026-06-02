@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -108,8 +108,7 @@
       {University of Virginia}{Charlottesville, VA}
       {B.A. in Applied Statistics, Minor in Computer Science $|$ GPA: 3.9/4.0}{Aug. 2023 -- May 2027}
       \resumeItemListStart
-        \resumeItem{\textbf{Data \& Analytics:} Monte Carlo simulation, bootstrap methods, hypothesis testing, EDA, ANOVA, regression, cross-validation, pandas, NumPy, Jupyter, data visualization}
-        \resumeItem{\textbf{Computer Science:} Python, Java, C, JavaScript, TypeScript, React, Next.js, Flask, Tailwind CSS, SQLite, Git/GitHub, REST APIs}
+        \resumeItem{\textbf{Relevant Coursework:} Statistical Machine Learning, Data Visual and Management, Data Analysis with Python, Design \& Analysis of Sample Surveys, Intro Mathematical Statistics, From Data to Knowledge, Intro to Regression Analysis, Software Dev Essentials, Computer Systems and Org 1, Discrete Math and Theory 1, Data Structures and Algo 1}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -123,14 +122,16 @@
       {UVA Historic Fashion Archive}{Charlottesville, VA}
       \resumeItemListStart
         \resumeItem{Architecting a Next.js 16 / React 19 / TypeScript frontend for UVA's vintage clothing collection, integrating a CollectiveAccess CMS via a custom API client (cookie + Basic Auth token flow, 5-minute in-memory cache, static JSON fallback) to ensure data availability under varying backend conditions}
-        \resumeItem{Implementing content-based filtering scoring garment similarity across five weighted attributes to power recommendations; built paginated collection pipeline with multi-attribute filtering, boolean search, and export to JSON/CSV/PDF}
+        \resumeItem{Implementing a content-based filtering algorithm scoring garment similarity across five weighted attributes (era, type, color, material, decade) to power related-item recommendations without a dedicated ML backend}
+        \resumeItem{Building full collection data pipeline: paginated grid with multi-attribute filtering, advanced boolean search, analytics tracking, and export to JSON/CSV/PDF; designed interactive 3D garment viewer using Three.js / @react-three/fiber}
       \resumeItemListEnd
 
     \resumeSubheading
       {Teaching Assistant}{January 2026 -- Present}
       {University of Virginia --- CS1112}{Charlottesville, VA}
       \resumeItemListStart
-        \resumeItem{Supported 30+ students in introductory Python through weekly office hours, lab sections, and one-on-one debugging; graded assignments and exams with structured feedback on data structures, control flow, and functions}
+        \resumeItem{Supported 30+ students in introductory Python through weekly office hours, lab sections, and one-on-one debugging}
+        \resumeItem{Graded assignments and exams with structured feedback on data structures, control flow, and functions}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -144,13 +145,15 @@
           {\textbf{Hana-Bi: E-Commerce Platform} $|$ \emph{Next.js, TypeScript, Stripe, Resend, Zustand}}{2024 -- Present}
           \resumeItemListStart
             \resumeItem{Engineering a full-stack e-commerce platform (Next.js 15, TypeScript, Stripe, Resend) with Stripe as the product data source of truth --- implementing an autopaging catalog pipeline, per-product metadata schema, and serverless-safe session verification via direct Stripe API calls}
-            \resumeItem{Building end-to-end transactional data flow: client cart state (Zustand), Checkout Session creation, webhook-driven order confirmation emails via Resend, and a waitlist capture pipeline with dual-notification routing}
+            \resumeItem{Building end-to-end transactional data flow: client cart state (Zustand, persisted locally), Checkout Session creation, webhook-driven order confirmation emails via Resend, and a waitlist capture pipeline with dual-notification routing}
+            \resumeItem{Structuring multi-environment deployment checklist covering API key rotation, webhook secrets, and sender domain verification}
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{Tech Industry Layoff Analysis} $|$ \emph{R, tidyverse, ggplot2, R Markdown}}{2026}
           \resumeItemListStart
-            \resumeItem{Analyzed 2,700+ tech layoffs using R and tidyverse, applying t-tests and ANOVA to compare workforce reduction severity across company types; built visualizations in ggplot2 uncovering that private companies cut proportionally twice as much of their workforce as public ones (32.4\% vs.\ 16.7\%)}
+            \resumeItem{Analyzed 2,700+ tech layoffs using R and tidyverse, applying t-tests and ANOVA to compare workforce reduction severity across company types and industries}
+            \resumeItem{Built exploratory visualizations in ggplot2 and engineered features from raw data; uncovered that private companies cut proportionally twice as much of their workforce as public ones (32.4\% vs.\ 16.7\%)}
             \resumeItem{Collaborated in a 3-person team using GitHub for version control, delivering a fully reproducible R Markdown report}
           \resumeItemListEnd
 
@@ -163,7 +166,8 @@
       \resumeProjectHeading
           {\textbf{NBA Salary Prediction Model} $|$ \emph{R, multiple linear regression, cross-validation}}{2025}
           \resumeItemListStart
-            \resumeItem{Built a multiple linear regression model predicting NBA player salaries from performance, awards, age, and position; achieved adj.\ R$^2 \approx 0.77$ via five-fold cross-validation; identified Points, Minutes, Rebounds, and Assists as dominant predictors via Cook's distance and residual analysis}
+            \resumeItem{Built a multiple linear regression model predicting NBA player salaries from performance, awards, age, and position; performed full EDA, variable selection, and assumption diagnostics (linearity, homoscedasticity, normality of residuals)}
+            \resumeItem{Achieved adj.\ R$^2 \approx 0.77$ via five-fold cross-validation; identified Points, Minutes, Rebounds, and Assists as dominant predictors; flagged high-leverage observations via Cook's distance and residual analysis}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
