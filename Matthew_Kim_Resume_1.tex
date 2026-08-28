@@ -124,6 +124,7 @@
         \resumeItem{Architecting a Next.js 16 / React 19 / TypeScript frontend for UVA's vintage clothing collection, integrating a CollectiveAccess CMS via a custom API client (cookie + Basic Auth token flow, 5-minute in-memory cache, static JSON fallback) to ensure data availability under varying backend conditions}
         \resumeItem{Implementing a content-based filtering algorithm scoring garment similarity across five weighted attributes (era, type, color, material, decade) to power related-item recommendations without a dedicated ML backend}
         \resumeItem{Building full collection data pipeline: paginated grid with multi-attribute filtering, advanced boolean search, analytics tracking, and export to JSON/CSV/PDF; designed interactive 3D garment viewer using Three.js / @react-three/fiber}
+        \resumeItem{Piloting a statistical pipeline extending the recommendation algorithm with geometry-based features: extracting shape descriptors (curvature, symmetry, drape) from 3D garment meshes via \texttt{trimesh}, then applying PCA and clustering (Python, R) validated against catalog metadata using ARI/NMI}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -142,7 +143,7 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{Hana-Bi: E-Commerce Platform} $|$ \emph{Next.js, TypeScript, Stripe, Resend, Zustand}}{2024 -- Present}
+          {\textbf{Hana-Bi: E-Commerce Platform} $|$ \emph{Next.js, TypeScript, Stripe, Resend, Zustand, Framer Motion}}{2024 -- Present}
           \resumeItemListStart
             \resumeItem{Engineering a full-stack e-commerce platform (Next.js 15, TypeScript, Stripe, Resend) with Stripe as the product data source of truth --- implementing an autopaging catalog pipeline, per-product metadata schema, and serverless-safe session verification via direct Stripe API calls}
             \resumeItem{Building end-to-end transactional data flow: client cart state (Zustand, persisted locally), Checkout Session creation, webhook-driven order confirmation emails via Resend, and a waitlist capture pipeline with dual-notification routing}
