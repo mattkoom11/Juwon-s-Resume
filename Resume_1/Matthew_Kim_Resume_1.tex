@@ -1,0 +1,190 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Matthew Kim} \\ \vspace{1pt}
+    \small (571) 351-7450 $|$
+    \href{mailto:mjuwon11@gmail.com}{\underline{mjuwon11@gmail.com}} $|$
+    \href{https://linkedin.com/in/matthewkim1104}{\underline{linkedin.com/in/matthewkim1104}} $|$
+    \href{https://github.com/mattkoom11}{\underline{github.com/mattkoom11}} $|$
+    Fairfax, VA
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Virginia}{Charlottesville, VA}
+      {B.A. in Applied Statistics, Minor in Computer Science $|$ GPA: 3.9/4.0}{Aug. 2023 -- May 2027}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Statistical Machine Learning, Data Visual and Management, Data Analysis with Python, Design \& Analysis of Sample Surveys, Intro Mathematical Statistics, From Data to Knowledge, Intro to Regression Analysis, Software Dev Essentials, Computer Systems and Org 1, Discrete Math and Theory 1, Data Structures and Algo 1}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Research Assistant}{2025 -- Present}
+      {UVA Historic Fashion Archive}{Charlottesville, VA}
+      \resumeItemListStart
+        \resumeItem{Architecting a Next.js 16 / React 19 / TypeScript frontend for UVA's vintage clothing collection, integrating a CollectiveAccess CMS via a custom API client (cookie + Basic Auth token flow, 5-minute in-memory cache, static JSON fallback) to ensure data availability under varying backend conditions}
+        \resumeItem{Implementing a content-based filtering algorithm scoring garment similarity across five weighted attributes (era, type, color, material, decade) to power related-item recommendations without a dedicated ML backend}
+        \resumeItem{Building full collection data pipeline: paginated grid with multi-attribute filtering, advanced boolean search, analytics tracking, and export to JSON/CSV/PDF; designed interactive 3D garment viewer using Three.js / @react-three/fiber}
+        \resumeItem{Piloting a statistical pipeline extending the recommendation algorithm with geometry-based features: extracting shape descriptors (curvature, symmetry, drape) from 3D garment meshes via \texttt{trimesh}, then applying PCA and clustering (Python, R) validated against catalog metadata using ARI/NMI}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Teaching Assistant}{2026 -- Present}
+      {University of Virginia --- CS1112}{Charlottesville, VA}
+      \resumeItemListStart
+        \resumeItem{Supported 300+ students in introductory Python through weekly office hours, lab sections, and one-on-one debugging}
+        \resumeItem{Graded assignments and exams with structured feedback on data structures, control flow, and functions}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Hana-Bi: E-Commerce Platform} $|$ \emph{Next.js, TypeScript, Stripe, Resend, Zustand}}{2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Engineering a full-stack e-commerce platform (Next.js 15, TypeScript, Stripe, Resend) with Stripe as the product data source of truth --- implementing an autopaging catalog pipeline, per-product metadata schema, and serverless-safe session verification via direct Stripe API calls}
+            \resumeItem{Building end-to-end transactional data flow: client cart state (Zustand, persisted locally), Checkout Session creation, webhook-driven order confirmation emails via Resend, and a waitlist capture pipeline with dual-notification routing}
+            \resumeItem{Structuring multi-environment deployment checklist covering API key rotation, webhook secrets, and sender domain verification}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Tech Industry Layoff Analysis} $|$ \emph{R, tidyverse, ggplot2, R Markdown}}{2026}
+          \resumeItemListStart
+            \resumeItem{Analyzed 2,700+ tech layoffs using R and tidyverse, applying t-tests and ANOVA to compare workforce reduction severity across company types and industries}
+            \resumeItem{Built exploratory visualizations in ggplot2 and engineered features from raw data; uncovered that private companies cut proportionally twice as much of their workforce as public ones (32.4\% vs.\ 16.7\%)}
+            \resumeItem{Collaborated in a 3-person team using GitHub for version control, delivering a fully reproducible R Markdown report}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Insurance Client Data Management System} $|$ \emph{Python, Flask, Google Sheets API, Render}}{2025}
+          \resumeItemListStart
+            \resumeItem{Built a Flask web app with a minimal intake form syncing entries to Google Sheets via the Sheets API (deployed on Render); replaced a binder-based workflow covering $\sim$2,000 records with searchable, sortable data and CSV export}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{NBA Salary Prediction Model} $|$ \emph{R, multiple linear regression, cross-validation}}{2025}
+          \resumeItemListStart
+            \resumeItem{Built a multiple linear regression model predicting NBA player salaries from performance, awards, age, and position; performed full EDA, variable selection, and assumption diagnostics (linearity, homoscedasticity, normality of residuals)}
+            \resumeItem{Achieved adj.\ R$^2 \approx 0.77$ via five-fold cross-validation; identified Points, Minutes, Rebounds, and Assists as dominant predictors; flagged high-leverage observations via Cook's distance and residual analysis}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, R, Java, C, JavaScript, TypeScript, SQL} \\
+     \textbf{Frameworks \& Libraries}{: React, Next.js, Flask, Tailwind CSS, pandas, NumPy, tidyverse, ggplot2, Three.js} \\
+     \textbf{Developer Tools}{: Git/GitHub, Stripe API, Google Sheets API, Resend, Zustand, Render, Jupyter, REST APIs} \\
+     \textbf{Statistical Methods}{: Hypothesis testing, ANOVA, regression, bootstrap, Monte Carlo simulation, cross-validation, EDA}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
