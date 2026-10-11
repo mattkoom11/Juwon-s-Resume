@@ -121,18 +121,19 @@
       {Research Assistant}{2024 -- Present}
       {UVA Historic Fashion Archive}{Charlottesville, VA}
       \resumeItemListStart
-        \resumeItem{Architecting a Next.js 16 / React 19 / TypeScript frontend for UVA's vintage clothing collection, integrating a CollectiveAccess CMS through a custom API client with cookie and Basic Auth token flow, a 5-minute in-memory cache, and a static JSON fallback to ensure data availability under varying backend conditions}
-        \resumeItem{Implementing a content-based machine learning algorithm that scores garment similarity across five weighted attributes, including era, type, color, material, and decade, to power related-item recommendations without a dedicated ML backend}
-        \resumeItem{Building the full collection data pipeline with a paginated grid, multi-attribute filtering, advanced Boolean search, analytics tracking, and JSON/CSV/PDF export; designing an interactive 3D garment viewer using Three.js / @react-three/fiber}
-        \resumeItem{Piloting a statistical pipeline that extends the recommendation algorithm with geometry-based features by extracting shape descriptors, including curvature, symmetry, and drape, from 3D garment meshes via \texttt{trimesh}, then applying PCA and clustering in Python and R with model evaluation against catalog metadata using ARI and NMI}
+        \resumeItem{Architected a Next.js 16 / React 19 / TypeScript frontend for UVA's historic clothing collection on a CollectiveAccess CMS (custom API client, 5-minute cache, static JSON fallback), with multi-attribute filtering, Boolean search, JSON/CSV/PDF export, and a Three.js 3D garment viewer}
+        \resumeItem{Rebuilt the related-item recommender as a learned re-ranker over FashionCLIP image embeddings and extracted attributes, raising nDCG@5 from 0.70 to 0.93 (95\% CI $+$0.15 to $+$0.31) on a 50-query blind-judged benchmark under nested cross-validation}
+        \resumeItem{Deployed collection search fusing BM25 with FashionCLIP text-to-image retrieval as a CPU-only FastAPI service (nDCG@5 0.80 vs.\ 0.68 for keyword search), and prototyped a local Qwen3-8B query parser with citation-checked RAG answers (nDCG@5 0.88); gated by GitHub Actions and tracked in MLflow}
+        \resumeItem{Extracted material, color, and technique attributes from 1,400+ catalog records (F1 0.95--0.99) and trained a linear probe on weak labels to tag undescribed garments from photos (color F1 0.58 vs.\ 0.39 zero-shot)}
+        \resumeItem{Piloted a 3D shape-descriptor pipeline (curvature, symmetry, drape via \texttt{trimesh}) on photogrammetry scans, applying PCA and clustering evaluated against catalog metadata (ARI, NMI)}
       \resumeItemListEnd
 
     \resumeSubheading
       {Teaching Assistant}{2026 -- Present}
       {University of Virginia --- CS1112}{Charlottesville, VA}
       \resumeItemListStart
-        \resumeItem{Supporting 300+ students in introductory Python through weekly office hours, lab sections, and one-on-one debugging}
-        \resumeItem{Grading assignments and exams with structured feedback on data structures, control flow, and functions}
+        \resumeItem{Supported 300+ students in introductory Python through weekly office hours, lab sections, and one-on-one debugging}
+        \resumeItem{Graded assignments and exams with structured feedback on data structures, control flow, and functions}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -145,9 +146,9 @@
       \resumeProjectHeading
           {\textbf{Hana-Bi: E-Commerce Platform} $|$ \emph{Next.js, TypeScript, Stripe, Resend, Zustand, Framer Motion}}{2024 -- Present}
           \resumeItemListStart
-            \resumeItem{Engineering a full-stack e-commerce platform with Stripe as the product data source of truth, implementing an autopaging catalog pipeline, a per-product metadata schema, and serverless-safe session verification via direct Stripe API calls}
-            \resumeItem{Building an end-to-end transactional data flow: client cart state (Zustand, persisted locally), Checkout Session creation, webhook-driven order confirmation emails via Resend, and a waitlist capture pipeline with dual-notification routing}
-            \resumeItem{Structuring a multi-environment deployment checklist covering API key rotation, webhook secrets, and sender domain verification}
+            \resumeItem{Engineered a full-stack e-commerce platform with Stripe as the product data source of truth, implementing an autopaging catalog pipeline, a per-product metadata schema, and serverless-safe session verification via direct Stripe API calls}
+            \resumeItem{Built an end-to-end transactional data flow: client cart state (Zustand, persisted locally), Checkout Session creation, webhook-driven order confirmation emails via Resend, and a waitlist capture pipeline with dual-notification routing}
+            \resumeItem{Structured a multi-environment deployment checklist covering API key rotation, webhook secrets, and sender domain verification}
           \resumeItemListEnd
 
       \resumeProjectHeading
@@ -155,7 +156,6 @@
           \resumeItemListStart
             \resumeItem{Analyzed 2,700+ tech layoffs using R and tidyverse, applying statistical modeling techniques including t-tests and ANOVA to compare workforce reduction severity across company types and industries}
             \resumeItem{Built exploratory visualizations in ggplot2 and engineered features from raw data; evaluated workforce reduction patterns and found that private companies cut proportionally twice as much of their workforce as public ones (32.4\% vs.\ 16.7\%)}
-            \resumeItem{Collaborated in a 3-person team using GitHub for version control, delivering a fully reproducible R Markdown report}
           \resumeItemListEnd
 
       \resumeProjectHeading
@@ -167,8 +167,7 @@
       \resumeProjectHeading
           {\textbf{NBA Salary Prediction Model} $|$ \emph{R, multiple linear regression, cross-validation}}{2025}
           \resumeItemListStart
-            \resumeItem{Built a multiple linear regression model predicting NBA player salaries from performance, awards, age, and position; performed full EDA, variable selection, and assumption diagnostics (linearity, homoscedasticity, normality of residuals)}
-            \resumeItem{Achieved adj.\ R$^2 \approx 0.62$, matched by five-fold cross-validation; identified Points, Minutes, Stocks (steals + blocks), and Age as key predictors; flagged high-leverage observations via Cook's distance and residual analysis}
+            \resumeItem{Built a multiple linear regression model of NBA player salaries (adj.\ R$^2 \approx 0.62$, matched by five-fold cross-validation), with full EDA, variable selection, assumption diagnostics, and Cook's distance leverage checks; Points, Minutes, Stocks, and Age were the key predictors}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -179,8 +178,8 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Python, R, Java, C, JavaScript, TypeScript, SQL} \\
-     \textbf{Frameworks \& Libraries}{: React, Next.js, Flask, Tailwind CSS, pandas, NumPy, tidyverse, ggplot2, Three.js, Generative AI, Retrieval-Augmented Generation (RAG)} \\
-     \textbf{Developer Tools}{: Git/GitHub, Stripe API, Google Sheets API, Resend, Zustand, Render, Jupyter, REST APIs, MLOps/LLMOps, CI/CD} \\
+     \textbf{Machine Learning \& AI}{: PyTorch, scikit-learn, OpenCLIP (FashionCLIP), Ollama, MLflow, RAG, Generative AI, retrieval \& ranking (BM25, nDCG), MLOps/LLMOps} \\
+     \textbf{Frameworks \& Tools}{: React, Next.js, FastAPI, Flask, Tailwind CSS, pandas, NumPy, tidyverse, ggplot2, Three.js, Git/GitHub, GitHub Actions (CI/CD), Stripe API, REST APIs, Jupyter} \\
      \textbf{Statistical Methods}{: Hypothesis testing, ANOVA, regression, bootstrap, Monte Carlo simulation, cross-validation, EDA, Machine Learning, Optimization, Forecasting, Model Evaluation}
     }}
  \end{itemize}
