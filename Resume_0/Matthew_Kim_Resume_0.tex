@@ -132,8 +132,7 @@
       {Teaching Assistant}{2026 -- Present}
       {University of Virginia --- CS1112}{Charlottesville, VA}
       \resumeItemListStart
-        \resumeItem{Supported 300+ students in introductory Python through weekly office hours, lab sections, and one-on-one debugging}
-        \resumeItem{Graded assignments and exams with structured feedback on data structures, control flow, and functions}
+        \resumeItem{Supported 300+ introductory Python students through weekly office hours, lab sections, and one-on-one debugging, and graded assignments and exams with structured feedback}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -144,18 +143,22 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
+          {\textbf{Mortgage Default Risk Model} $|$ \emph{Python, pandas, scikit-learn, LightGBM}}{2026}
+          \resumeItemListStart
+            \resumeItem{Modeled 24-month default for 600K+ Fannie Mae loans (106 GB of performance data); logistic regression, random forest, and gradient boosting tied at ROC AUC 0.83 on an out-of-time test set}
+            \resumeItem{Traced a 5--8$\times$ Florida/Texas default spike to 2017 hurricane forbearance and redefined the label; at 100:1 costs, the calibrated model flags 7\% of loans and catches 39\% of defaults}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
           {\textbf{Hana-Bi: E-Commerce Platform} $|$ \emph{Next.js, TypeScript, Stripe, Resend, Zustand, Framer Motion}}{2024 -- Present}
           \resumeItemListStart
-            \resumeItem{Engineered a full-stack e-commerce platform with Stripe as the product data source of truth, implementing an autopaging catalog pipeline, a per-product metadata schema, and serverless-safe session verification via direct Stripe API calls}
-            \resumeItem{Built an end-to-end transactional data flow: client cart state (Zustand, persisted locally), Checkout Session creation, webhook-driven order confirmation emails via Resend, and a waitlist capture pipeline with dual-notification routing}
-            \resumeItem{Structured a multi-environment deployment checklist covering API key rotation, webhook secrets, and sender domain verification}
+            \resumeItem{Engineered a full-stack e-commerce platform with Stripe as the product source of truth: an autopaging catalog pipeline, persisted cart state, Checkout Sessions, and webhook-driven order and waitlist emails via Resend}
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{Tech Industry Layoff Analysis} $|$ \emph{R, tidyverse, ggplot2, R Markdown}}{2026}
           \resumeItemListStart
-            \resumeItem{Analyzed 2,700+ tech layoffs using R and tidyverse, applying statistical modeling techniques including t-tests and ANOVA to compare workforce reduction severity across company types and industries}
-            \resumeItem{Built exploratory visualizations in ggplot2 and engineered features from raw data; evaluated workforce reduction patterns and found that private companies cut proportionally twice as much of their workforce as public ones (32.4\% vs.\ 16.7\%)}
+            \resumeItem{Analyzed 2,700+ tech layoffs with t-tests, ANOVA, and ggplot2 across company types and industries, finding that private companies cut twice the share of their workforce that public ones did (32.4\% vs.\ 16.7\%)}
           \resumeItemListEnd
 
       \resumeProjectHeading
@@ -178,9 +181,9 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Python, R, Java, C, JavaScript, TypeScript, SQL} \\
-     \textbf{Machine Learning \& AI}{: PyTorch, scikit-learn, OpenCLIP (FashionCLIP), Ollama, MLflow, RAG, Generative AI, retrieval \& ranking (BM25, nDCG), MLOps/LLMOps} \\
-     \textbf{Frameworks \& Tools}{: React, Next.js, FastAPI, Flask, Tailwind CSS, pandas, NumPy, SciPy, tidyverse, ggplot2, plotly, R Shiny, rvest (web scraping), Three.js, Git/GitHub, GitHub Actions (CI/CD), Stripe API, REST APIs, Jupyter} \\
-     \textbf{Statistical Methods}{: Hypothesis testing, ANOVA, linear \& logistic regression, ridge/lasso regularization, KNN, LDA, decision trees, splines, bootstrap, Monte Carlo simulation, cross-validation, ROC/AUC, precision/recall, EDA, Optimization, Forecasting, Model Evaluation} \\
+     \textbf{Machine Learning \& AI}{: PyTorch, scikit-learn, LightGBM, OpenCLIP (FashionCLIP), Ollama, MLflow, RAG, Generative AI, retrieval \& ranking (BM25, nDCG), MLOps/LLMOps} \\
+     \textbf{Frameworks \& Tools}{: React, Next.js, FastAPI, Flask, pandas, NumPy, SciPy, tidyverse, ggplot2, plotly, R Shiny, rvest (web scraping), Git/GitHub, GitHub Actions (CI/CD), Stripe API, REST APIs, Jupyter} \\
+     \textbf{Statistical Methods}{: Hypothesis testing, ANOVA, linear \& logistic regression, ridge/lasso regularization, KNN, LDA, decision trees, random forests, gradient boosting, splines, bootstrap, Monte Carlo simulation, cross-validation, ROC/AUC, precision/recall, EDA, Model Evaluation} \\
      \textbf{Survey Sampling}{: Stratified \& cluster sampling, sample-size determination, ratio \& regression estimation, capture-recapture}
     }}
  \end{itemize}
